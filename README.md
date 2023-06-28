@@ -43,7 +43,7 @@ python setup.py clean --all
 python setup.py install
 ```
 
-### If you want to prepare for the model using Encoder-3 to encode the complementary spectrum: 
+### If you want to prepare for the model using Encoder-2 to encode the complementary spectrum: 
 
 ```
 cd main
