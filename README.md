@@ -10,7 +10,7 @@ conda activate main_env
 pip install tensorboard;
 ```
 
-### If you want to prepare for the casanovo model: 
+### Prepare for the casanovo model: 
 
 ```
 cd main
@@ -21,7 +21,7 @@ python setup.py clean --all
 python setup.py install;
 ```
 
-### If you want to prepare for the PandaNovo model: 
+### Prepare for the PandaNovo model: 
 
 ```
 cd main
@@ -32,7 +32,7 @@ python setup.py clean --all
 python setup.py install;
 ```
 
-### If you want to prepare for the model using Encoder-1 to encode the complementary spectrum: 
+### Prepare for the model using Encoder-1 to encode the complementary spectrum: 
 
 ```
 cd main
@@ -43,7 +43,7 @@ python setup.py clean --all
 python setup.py install
 ```
 
-### If you want to prepare for the model using Encoder-2 to encode the complementary spectrum: 
+### Prepare for the model using Encoder-2 to encode the complementary spectrum: 
 
 ```
 cd main
@@ -63,19 +63,19 @@ cd ../..
 ## Train a model from scratch:
 
 ```
-main --mode=train --gpu=0 --config=./merge-config.yaml --output=train.log --peak_path=./merged-dataset_and_ABRF_DDA_PXD008844_PXD010559/merged-train.mgf --peak_path_val=./merged-dataset_and_ABRF_DDA_PXD008844_PXD010559/merged-valid.mgf
+main --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=./code/sample_data/training_set/*.mgf --peak_path_val=./code/sample_data/validation_set/*.mgf
 ```
 
 ## Evaluate a pretrained model
 
 ```
-main --mode=eval --gpu=0 --config=./merge-config.yaml --output=test.log --peak_path=./merged-dataset_and_ABRF_DDA_PXD008844_PXD010559/ABRF_DDA-test.mgf --model=./Model-weights/PandaNovo/merge-epoch-26-step-500000.ckpt 
+main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./code/sample_data/validation_set/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
 ```
 
 ## De novo sequencing (the results will be shown in the current folder as predictions.txt)
 
 ```
-main --mode=denovo --config=./merge-config.yaml --gpu=0 --output=test --peak_path=To_be_Identified_MS2.mgf --model=./Model-weights/PandaNovo/merge-epoch-26-step-500000.ckpt 
+main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./code/sample_data/denovo_sample/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
 ```
 
 ## the config.yaml used in PandaNovo and Casanovo
