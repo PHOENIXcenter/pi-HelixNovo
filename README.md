@@ -57,7 +57,7 @@ python setup.py install
 Back to the code folder
 
 ```
-cd ../..
+cd ..
 ```
 
 ## Train a model from scratch:
