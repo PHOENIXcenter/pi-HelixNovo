@@ -7,7 +7,8 @@ Enter the code folder
 ```
 conda create --name main_env python=3.8
 conda activate main_env
-pip install tensorboard;
+pip install tensorboard
+pip install torch -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### Prepare for the casanovo model: 
@@ -63,19 +64,19 @@ cd ..
 ## Train a model from scratch:
 
 ```
-main --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=./code/sample_data/training_set/*.mgf --peak_path_val=./code/sample_data/validation_set/*.mgf
+main --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=./sample_data/training_set/*.mgf --peak_path_val=./sample_data/validation_set/*.mgf
 ```
 
 ## Evaluate a pretrained model
 
 ```
-main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./code/sample_data/validation_set/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
+main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./sample_data/validation_set/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
 ```
 
 ## De novo sequencing (the results will be shown in the current folder as predictions.txt)
 
 ```
-main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./code/sample_data/denovo_sample/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
+main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
 ```
 
 ## the config.yaml used in PandaNovo and Casanovo
