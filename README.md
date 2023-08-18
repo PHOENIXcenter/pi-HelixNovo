@@ -27,7 +27,7 @@ python setup.py install;
 cd main
 python setup.py clean --all
 python setup.py install
-cd ../depthcharge-encoder3(PandaNovo)
+cd ../depthcharge-encoder3\(PandaNovo\)
 python setup.py clean --all
 python setup.py install;
 ```
