@@ -8,6 +8,7 @@ Enter the code folder
 conda create --name main_env python=3.8
 conda activate main_env
 pip install tensorboard
+pip install setuptools_scm==4.0.0
 ```
 
 ### Prepare for the casanovo model: 
