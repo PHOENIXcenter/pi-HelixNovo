@@ -8,7 +8,6 @@ Enter the code folder
 conda create --name main_env python=3.8
 conda activate main_env
 pip install tensorboard
-pip install torch -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### Prepare for the casanovo model: 
