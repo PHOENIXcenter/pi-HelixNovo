@@ -1,5 +1,5 @@
 # PandaNovo
-PandaNovo is a de novo sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides.
+PandaNovo is a de novo sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides. The model weights we have trained are avaliable at https://zenodo.org/record/8088491.
 # The usage of our code
 ## Preparation:  
 Enter the code folder
@@ -70,20 +70,20 @@ main --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=
 ## Evaluate a pretrained model
 
 ```
-main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./sample_data/validation_set/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
+main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./sample_data/validation_set/*.mgf --model=the_path_of_your_model
 ```
 
 ## De novo sequencing (the results will be shown in the current folder as predictions.txt)
 
 ```
-main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=./Model-weights/PandaNovo/ricebean-epoch-11-step-550000.ckpt 
+main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
 ```
 
-## the config.yaml used in PandaNovo and Casanovo
-If you train models on the nine-species benchmark dataset, please use config.yaml  
+## The config.yaml used in PandaNovo and Casanovo
+To train models on the nine-species benchmark dataset, please use config.yaml  
 
-If you train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD012979, please use merge-config.yaml.
+To train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD012979, please use merge-config.yaml.
 
-If you train models on the MSV000081142 dataset, please use config.yaml
+To  train models on the MSV000081142 dataset, please use config.yaml
 
 
