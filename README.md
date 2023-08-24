@@ -1,5 +1,5 @@
-# PandaNovo
-PandaNovo is a de novo sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides. The model weights we have trained are avaliable at https://zenodo.org/record/8088491.
+# pi-HelixNovo
+pi-HelixNovo is a de novo sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides. The model weights we have trained are avaliable at https://zenodo.org/record/8088491.
 # The usage of our code
 ## Preparation:  
 Enter the code folder
@@ -22,7 +22,7 @@ python setup.py clean --all
 python setup.py install;
 ```
 
-### Prepare for the PandaNovo model: 
+### Prepare for the pi-HelixNovo model: 
 
 ```
 cd main
@@ -79,7 +79,7 @@ main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_pat
 main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
 ```
 
-## The config.yaml used in PandaNovo and Casanovo
+## The config.yaml used in pi-HelixNovo and Casanovo
 To train models on the nine-species benchmark dataset, please use config.yaml  
 
 To train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD012979, please use merge-config.yaml.
