@@ -28,7 +28,7 @@ python setup.py install;
 cd main
 python setup.py clean --all
 python setup.py install
-cd ../depthcharge-encoder3\(PandaNovo\)
+cd ../depthcharge-encoder3\(pi-HelixNovo\)
 python setup.py clean --all
 python setup.py install;
 ```
