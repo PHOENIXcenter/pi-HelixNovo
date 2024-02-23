@@ -7,9 +7,8 @@ Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, L
 Enter the code folder
 
 ```
-conda create --name main_env python=3.8
-conda activate main_env
-pip install tensorboard
+conda env create -f main_env.yaml
+conda activate main_env 
 pip install setuptools_scm==4.0.0
 ```
 
