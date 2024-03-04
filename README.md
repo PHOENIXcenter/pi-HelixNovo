@@ -36,7 +36,7 @@ The results will be shown in the current folder as **denovo**_denovo.txt because
 | 28 | LQHEAATATQK | 0.93 |  
 | 29 | KEAAPPPK | 0.96 |
 
-"TITLE" is the "TITLE" for a MS spectrum in the corresponding mgf file.
+"TITLE" is the TITLE information of the MS spectrum in the corresponding mgf file, and "p" is the confidence score of the peptide sequence.
 
 ## The config.yaml used in pi-HelixNovo
 To train models on the nine-species benchmark dataset, please use config.yaml  
