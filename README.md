@@ -35,6 +35,7 @@ The results will be shown in the current folder as <font color="blue">denovo</fo
 | 27 | VLEGHAEK | 0.95 |  
 | 28 | LQHEAATATQK | 0.93 |  
 | 29 | KEAAPPPK | 0.96 |
+
 "TITLE" is the "TITLE" for a MS spectrum in the corresponding mgf file.
 
 ## The config.yaml used in pi-HelixNovo
