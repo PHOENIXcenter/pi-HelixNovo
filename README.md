@@ -29,7 +29,7 @@ python main.py --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log 
 ```
 python main.py --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
 ```
-The results will be shown in the current folder as <font color="blue">denovo</font>_denovo.txt because --output=<font color="blue">denovo</font>.log
+The results will be shown in the current folder as **denovo**_denovo.txt because --output=**denovo**.log
 | TITLE | Peptide | p |  
 | :--: | :--: | :--: |  
 | 27 | VLEGHAEK | 0.95 |  
