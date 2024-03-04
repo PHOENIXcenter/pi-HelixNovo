@@ -9,78 +9,35 @@ Enter the code folder
 ```
 conda env create -f main_env.yaml
 conda activate main_env 
-pip install setuptools_scm==4.0.0
 ```
 
-### Prepare for the casanovo model: 
-
-```
-cd main
-python setup.py clean --all
-python setup.py install
-cd ../depthcharge-casanovo
-python setup.py clean --all
-python setup.py install;
-```
-
-### Prepare for the pi-HelixNovo model: 
-
-```
-cd main
-python setup.py clean --all
-python setup.py install
-cd ../depthcharge-encoder3\(pi-HelixNovo\)
-python setup.py clean --all
-python setup.py install;
-```
-
-### Prepare for the model using Encoder-1 to encode the complementary spectrum: 
-
-```
-cd main
-python setup.py clean --all
-python setup.py install
-cd ../depthcharge-encoder1
-python setup.py clean --all
-python setup.py install
-```
-
-### Prepare for the model using Encoder-2 to encode the complementary spectrum: 
-
-```
-cd main
-python setup.py clean --all
-python setup.py install
-cd ../depthcharge-encoder2
-python setup.py clean --all
-python setup.py install
-```
-
-Back to the code folder
-
-```
-cd ..
-```
 
 ## Train a model from scratch:
 
 ```
-main --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=./sample_data/training_set/*.mgf --peak_path_val=./sample_data/validation_set/*.mgf
+python main.py --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=./sample_data/training_set/*.mgf --peak_path_val=./sample_data/validation_set/*.mgf
 ```
 
 ## Evaluate a pretrained model
 
 ```
-main --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./sample_data/validation_set/*.mgf --model=the_path_of_your_model
+python main.py --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./sample_data/validation_set/*.mgf --model=the_path_of_your_model
 ```
 
-## De novo sequencing (the results will be shown in the current folder as predictions.txt)
+## De novo sequencing
 
 ```
-main --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
+python main.py --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
 ```
+The results will be shown in the current folder as <font color="blue">denovo</font>_denovo.txt because --output=<font color="blue">denovo</font>.log
+| TITLE | Peptide | p |  
+| :--: | :--: | :--: |  
+| 27 | VLEGHAEK | 0.95 |  
+| 28 | LQHEAATATQK | 0.93 |  
+| 29 | KEAAPPPK | 0.96 |
+"TITLE" is the "TITLE" for a MS spectrum in the corresponding mgf file.
 
-## The config.yaml used in pi-HelixNovo and Casanovo
+## The config.yaml used in pi-HelixNovo
 To train models on the nine-species benchmark dataset, please use config.yaml  
 
 To train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD012979, please use merge-config.yaml.
@@ -88,3 +45,5 @@ To train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD
 To  train models on the MSV000081142 dataset, please use config.yaml
 
 
+# Recommendation
+For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "MSV000081142-epoch-5-step-800000.ckpt", which was trained on the MSV000081142 dataset, while employing the "config.yaml" configuration file.
