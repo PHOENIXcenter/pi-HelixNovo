@@ -218,8 +218,7 @@ def train(
     if val_is_index and len(val_filenames) > 1:
         logger.error("Multiple validation HDF5 spectrum indexes specified")
         raise ValueError("Multiple validation HDF5 spectrum indexes specified")
-    #tmp_dir = tempfile.TemporaryDirectory()
-    tmp_dir = tempfile.TemporaryDirectory(dir='/userhome/tmp')   # 临时的，完了改回去
+    tmp_dir = tempfile.TemporaryDirectory()
     if train_is_index:
         train_idx_fn, train_filenames = train_filenames[0], None
     else:
