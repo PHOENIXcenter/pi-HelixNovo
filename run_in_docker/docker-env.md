@@ -9,31 +9,33 @@
 docker pull ytp22/pi-helixnovo-env:v1
 ```
 
-- Make a dir (c:/docker-share-dir) and put the pretrained model weights in it.
-
 ![run0](docker-env/run0.png)
 
-```jsx
-docker run -it -v c:/docker-share-dir/:/data:rw --gpus all --shm-size 15G --name pi-HelixNovo ytp22/pi-helixnovo-env:v1 bash
-```
+- Make a dir (c:/docker-share-dir) and put the pretrained model weights in it.
 
 ![run1](docker-env/run1.png)
 
-```jsx
- cd /home/pi-HelixNovo/; conda activate main_env;
+```
+docker run -it -v c:/docker-share-dir/:/data:rw --gpus all --shm-size 15G --name pi-HelixNovo ytp22/pi-helixnovo-env:v1 bash
 ```
 
 ![run2](docker-env/run2.png)
 
-Note: /data dir corresponds to the c:/docker-share-dir dir
+```
+ cd /home/pi-HelixNovo/; conda activate main_env;
+```
 
 ![run3](docker-env/run3.png)
+
+Note: /data dir corresponds to the c:/docker-share-dir dir
+
+![run4](docker-env/run4.png)
 
 ```
 python [main.py](http://main.py/) --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=/data/MSV000081142-epoch-5-step-800000.ckpt
 ```
 
-![run4](docker-env/run4.png)
+![run5](docker-env/run5.png)
 
 If the error “CUDA OUT OF MEMORY” occurs, please decrease the “predict_batch_size” in the config.yaml.
 
@@ -45,4 +47,4 @@ mv denovo_denovo.txt /data/
 
 You will see the results in c:/docker-share-dir
 
-![run5](docker-env/run5.png)
+![run6](docker-env/run6.png)
