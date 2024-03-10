@@ -3,7 +3,8 @@ pi-HelixNovo is a de novo sequencing model based on the Transformer architecture
 
 Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
 # The usage of our code
-## Preparation:  
+## Preparation:
+### For linux users
 Enter the code folder
 
 ```
@@ -11,6 +12,8 @@ conda env create -f main_env.yaml
 conda activate main_env 
 ```
 
+### For windows users
+Refer to [Run pi-HelixNovo in Docker](docker-env.md)
 ## Specify the device
 
 ```
