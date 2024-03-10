@@ -158,6 +158,8 @@ def main(
     # Add extra configuration options and scale by the number of GPUs.
     gpu=gpu.split(',')
     gpu=[int(i) for i in gpu]
+    if gpu[0]==-1:
+        gpu=None
     config["gpu"]=gpu
     config["train_batch_size"] = config["train_batch_size"] // len(gpu)
 
