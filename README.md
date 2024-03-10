@@ -6,14 +6,14 @@ Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, L
 ## Preparation:  
 Enter the code folder
 
-```jsx
+```
 conda env create -f main_env.yaml
 conda activate main_env 
 ```
 
 ## Specify the device
 
-```jsx
+```
 --gpu=-1 # run pi-HelixNovo on CPU
 --gpu=0 # run pi-HelixNovo on GPU 0
 --gpu=0,1 # run pi-HelixNovo on GPU 0,1; Distributed deep learning
@@ -21,19 +21,19 @@ conda activate main_env
 
 ## Train a model from scratch:
 
-```jsx
+```
 python main.py --mode=train --gpu=0 --config=./config.yaml --output=train.log --peak_path=./sample_data/training_set/*.mgf --peak_path_val=./sample_data/validation_set/*.mgf
 ```
 
 ## Evaluate a pretrained model
 
-```jsx
+```
 python main.py --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log --peak_path=./sample_data/validation_set/*.mgf --model=the_path_of_your_model
 ```
 
 ## De novo sequencing
 
-```jsx
+```
 python main.py --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
 ```
 The results will be shown in the current folder as **denovo**_denovo.txt because --output=**denovo**.log
