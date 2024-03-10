@@ -13,7 +13,7 @@ conda activate main_env
 ```
 
 ### For windows users
-Refer to [Run pi-HelixNovo in Docker](docker-env.md)
+Refer to [Run pi-HelixNovo in Docker](./run_in_docker/docker-env.md)
 ## Specify the device
 
 ```
