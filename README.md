@@ -11,6 +11,13 @@ conda env create -f main_env.yaml
 conda activate main_env 
 ```
 
+## Specify the device
+
+```
+--gpu=-1 # run pi-HelixNovo on CPU
+--gpu=0 # run pi-HelixNovo on GPU 0
+--gpu=0,1 # run pi-HelixNovo on GPU 0,1; Distributed deep learning
+```
 
 ## Train a model from scratch:
 
