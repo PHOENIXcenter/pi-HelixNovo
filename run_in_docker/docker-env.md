@@ -32,7 +32,7 @@ Note: /data dir corresponds to the c:/docker-share-dir dir
 ![run4](docker-env/run4.png)
 
 ```
-python [main.py](http://main.py/) --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=/data/MSV000081142-epoch-5-step-800000.ckpt
+python main.py --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=/data/MSV000081142-epoch-5-step-800000.ckpt
 ```
 
 ![run5](docker-env/run5.png)
