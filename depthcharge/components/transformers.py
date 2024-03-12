@@ -196,7 +196,7 @@ class _PeptideTransformer(torch.nn.Module):
         sequence = [self._idx2aa.get(i.item(), "") for i in tokens]
         if "$" in sequence:
             idx = sequence.index("$")
-            sequence = sequence[: idx + 1]
+            sequence = sequence[: idx]
 
         if self.reverse:
             sequence = list(reversed(sequence))
