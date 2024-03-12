@@ -872,22 +872,14 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         peptides_pred, peptides_true = [], []
         peptides_score = []
         for peptide_pred, peptide_true, aa_score in zip(peptides_pred_raw, batch[2], aa_scores):
-            if len(peptide_pred) > 0:
-                aa_score = aa_score[0:len(peptide_pred),:]
+            length = len(re.split(r"(?<=.)(?=[A-Z])", peptide_pred))
+            if length > 0:
+                aa_score = aa_score[0:length,:]
                 aa_score = torch.flip(aa_score, dims=[0])
-                if peptide_pred[0] == "$":
-                    peptide_pred = peptide_pred[1:]  # Remove stop token.
-                    aa_score = aa_score[1:,:]
-                    
-                if "$" not in peptide_pred and len(peptide_pred) > 0:
-                    pep_score = aa_score.max(dim=1).values.float().mean().item()
-                    peptides_pred.append(peptide_pred)
-                    peptides_score.append(pep_score)
-                    peptides_true.append(peptide_true)
-                else:
-                    peptides_pred.append('$')
-                    peptides_score.append(0.0)
-                    peptides_true.append(peptide_true)
+                pep_score = aa_score.max(dim=1).values.float().mean().item()
+                peptides_pred.append(peptide_pred)
+                peptides_score.append(pep_score)
+                peptides_true.append(peptide_true)
             else:
                 peptides_pred.append('$')
                 peptides_score.append(0.0)
@@ -929,20 +921,13 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         peptides_pred = []
         peptides_score = []
         for peptide_pred,aa_score in zip(peptides_pred_raw,aa_scores):
-            if len(peptide_pred) > 0:
-                aa_score = aa_score[0:len(peptide_pred),:]
+            length = len(re.split(r"(?<=.)(?=[A-Z])", peptide_pred))
+            if length > 0:
+                aa_score = aa_score[0:length,:]
                 aa_score = torch.flip(aa_score, dims=[0])
-                if peptide_pred[0] == "$":
-                    peptide_pred = peptide_pred[1:]  # Remove stop token.
-                    aa_score = aa_score[1:,:]
-                    
-                if "$" not in peptide_pred and len(peptide_pred) > 0:
-                    pep_score = aa_score.max(dim=1).values.float().mean().item()
-                    peptides_pred.append(peptide_pred)
-                    peptides_score.append(pep_score)
-                else:
-                    peptides_pred.append('$')
-                    peptides_score.append(0.0)
+                pep_score = aa_score.max(dim=1).values.float().mean().item()
+                peptides_pred.append(peptide_pred)
+                peptides_score.append(pep_score)
             else:
                 peptides_pred.append('$')
                 peptides_score.append(0.0)
