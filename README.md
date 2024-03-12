@@ -3,10 +3,10 @@ pi-HelixNovo is a de novo sequencing model based on the Transformer architecture
 
 Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
 # Hardware requirements
-- GPU
--- AAA
-- An NVIDIA GPU with enough computing power and memory (e.g., Tesla V100 with 32GB of memory).
-  Training pi-HelixNovo on CPU will be very slow.
+## GPU
+- Train a model from scratch: An NVIDIA GPU with enough computing power and memory (e.g., Tesla V100 with 32GB of memory).
+- Evaluate a pretrained model or de novo sequencing: CPU (slow) or An NVIDIA GPU (e.g., GeForce RTX 3050 with 4GB of memory, ..., Tesla V100 with 32GB of memory). If the error “CUDA OUT OF MEMORY” occurs, please decrease the “predict_batch_size” in the config.yaml.
+## Storage space
 - Windows system: C drive with enough storage space.
 - Linux system: A hard disk with enough storage space.
 # The usage of our code
