@@ -5,7 +5,7 @@ Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, L
 # Hardware requirements
 ## GPU
 - Train a model from scratch: An NVIDIA GPU with enough computing power and memory (e.g., Tesla V100 with 32GB of memory).
-- Evaluate a pretrained model or de novo sequencing: CPU (slow) or An NVIDIA GPU (e.g., GeForce RTX 3050 with 4GB of memory, ..., Tesla V100 with 32GB of memory). If the error “CUDA OUT OF MEMORY” occurs, please decrease the “predict_batch_size” in the config.yaml.
+- Evaluate a pretrained model or de novo sequencing: CPU (slow) or an NVIDIA GPU (e.g., GeForce RTX 3050 with 4GB of memory, ..., Tesla V100 with 32GB of memory). If the error “CUDA OUT OF MEMORY” occurs, please decrease the “predict_batch_size” in the config.yaml.
 ## Storage space
 - Windows system: C drive with enough storage space.
 - Linux system: A hard disk with enough storage space.
