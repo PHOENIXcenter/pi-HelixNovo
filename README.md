@@ -60,7 +60,7 @@ The first line of the file "denovo_denovo.txt_evaluate.txt" indicates the AA pre
 Starting from the second line, the ground truth peptide for each item in the file "denovo_denovo.txt" is appended after the item, shown as:
 
 | TITLE | Peptide-F1 | p-F1 | Peptide-R1 | p-R1 | Peptide-F2 | p-F2 | Peptide-R2 | p-R2 | Peptide | p | Ground-truth-peptide |
-
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 
 ## Evaluate the performance of the quality control strategy we proposed to filtering the correct PSMs from the results of de novo peptide sequencing
 
