@@ -1,5 +1,5 @@
 # pi-HelixNovoV2
-pi-HelixNovoV2 is a de novo peptide sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides with a set of bidirectional Decoders. The model weights we have trained are avaliable at https://zenodo.org/records/10405582. If you use pi-HelixNovoV2 in your work, please cite the following publication: 
+pi-HelixNovoV2 is a de novo peptide sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides with a set of bidirectional Decoders. The model weights we have trained are avaliable at https://zenodo.org/uploads/12527491. If you use pi-HelixNovoV2 in your work, please cite the following publication: 
 
 Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
 # The usage of our code
@@ -76,4 +76,4 @@ To  train models on the datasets used in PepNet, please use config-pepnet.yaml
 To  train models on the MSV000082287 dataset (MS2 spectra of human gut bacteria proteins), please use config-gut.yaml
 
 # Recommendation
-For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "Codes-ModelWeights-DeNovoResults/Powerful-pi-HelixNovoV2/ModelWeights/Trained-On-MSV000081142.ckpt", which was trained on the MSV000081142 dataset, while employing the "config.yaml" configuration file.
+For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "Powerful-pi-HelixNovoV2/ModelWeights/Trained-On-MSV000081142.ckpt", which was trained on the MSV000081142 dataset, while employing the "config.yaml" configuration file.

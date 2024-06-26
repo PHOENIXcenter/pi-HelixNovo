@@ -1,4 +1,4 @@
-# Run pi-HelixNovo in Docker
+# Run pi-HelixNovoV2 in Docker
 
 - Setup the Docker Desktop
 - Open Docker Desktop
@@ -24,6 +24,8 @@ docker run -it -v c:/docker-share-dir/:/data:rw --gpus all --shm-size 15G --name
 ```
  cd /home/pi-HelixNovo/; conda activate main_env;
 ```
+
+Note: please replace the codes with the codes in https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovoV2
 
 ![run3](docker-env/run3.png)
 
