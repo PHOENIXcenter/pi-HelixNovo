@@ -219,6 +219,7 @@ def train(
         logger.error("Multiple validation HDF5 spectrum indexes specified")
         raise ValueError("Multiple validation HDF5 spectrum indexes specified")
     tmp_dir = tempfile.TemporaryDirectory()
+    #tmp_dir = tempfile.TemporaryDirectory(dir='/userhome/tmp')
     if train_is_index:
         train_idx_fn, train_filenames = train_filenames[0], None
     else:
@@ -303,7 +304,7 @@ def train(
                 dirpath=config["model_save_folder_path"],
                 save_top_k=-1,
                 save_weights_only=config["save_weights_only"],
-                every_n_train_steps=config["every_n_train_steps"],
+                #every_n_train_steps=config["every_n_train_steps"],
             )
         ]
     else:

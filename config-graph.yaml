@@ -1,5 +1,5 @@
 # Random seed to ensure reproducible results.
-random_seed: 454
+random_seed: 3407 #360
 
 # Spectrum processing options.
 n_peaks: 150
