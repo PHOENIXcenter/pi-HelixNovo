@@ -61,6 +61,7 @@ Starting from the second line, the ground truth peptide for each item in the fil
 
 | TITLE | Peptide-F1 | p-F1 | Peptide-R1 | p-R1 | Peptide-F2 | p-F2 | Peptide-R2 | p-R2 | Peptide | p | Ground-truth-peptide |
 
+
 ## Evaluate the performance of the quality control strategy we proposed to filtering the correct PSMs from the results of de novo peptide sequencing
 
 ```
