@@ -1,7 +1,11 @@
-# pi-HelixNovoV2
-pi-HelixNovoV2 is a de novo peptide sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides with a set of bidirectional Decoders. The model weights we have trained are avaliable at https://zenodo.org/uploads/12527491. If you use pi-HelixNovoV2 in your work, please cite the following publication: 
+# π-HelixNovoV2
+π-HelixNovoV2 is a de novo peptide sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides with a set of bidirectional Decoders. The model weights we have trained are avaliable at https://zenodo.org/uploads/12527491. If you use π-HelixNovoV2 in your work, please cite the following publication: 
 
 Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
+
+# The architecture of π-HelixNovoV2
+![model-architecture](Model-architecture.jpg)
+
 # The usage of our code
 ## Preparation:
 ### For linux users
@@ -13,7 +17,7 @@ conda activate main_env
 ```
 
 ### For windows users
-Refer to [Run pi-HelixNovoV2 in Docker](./run_in_docker/docker-env.md)
+Refer to [Run π-HelixNovoV2 in Docker](./run_in_docker/docker-env.md)
 ## Specify the device
 
 ```
