@@ -49,7 +49,7 @@ python main.py --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log 
 The results will be shown in the current folder as **denovo**.csv because --output=**denovo**.log
 | sequence | score | aa_scores | spectrum_id |  
 | :--: | :--: | :--: | :--: |  
-| VLEGHAEK | 0.95 | 1.0|1.0|0.92|1.0|1.0|1.0|0.7|1.0 | sample.mgf:0 |  
+| VLEGHAEK | 0.95 | "1.0|1.0|0.92|1.0|1.0|1.0|0.7|1.0" | sample.mgf:0 |  
 | LQHEAATATQK | 0.93 | 1.0|0.99|1.0|0.93|1.0|1.0|0.53|0.98|0.99|0.83|1.0 | sample.mgf:1 |  
 | KEAAPPPK | 0.96 | 1.0|0.99|1.0|1.0|0.72|1.0|1.0|1.0 | sample.mgf:2 |
 
