@@ -156,6 +156,10 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         self.out_writer = out_writer
         self.decoding=config['decoding']
         self.n_beams=config['n_beams']
+        
+        with open(self.out_writer,'w') as f:
+            f.write('sequence,score,aa_scores,spectrum_id\n')
+            
 
     def forward(
         self, memories, mem_masks, precursors
@@ -920,21 +924,26 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         # FIXME: Temporary fix to skip predictions with multiple stop tokens.
         peptides_pred = []
         peptides_score = []
+        aas_score=[]
         for peptide_pred,aa_score in zip(peptides_pred_raw,aa_scores):
             length = len(re.split(r"(?<=.)(?=[A-Z])", peptide_pred))
             if length > 0:
                 aa_score = aa_score[0:length,:]
                 aa_score = torch.flip(aa_score, dims=[0])
+                tmp=aa_score.max(dim=1).values.float().cpu().tolist()
+                tmp=[str(round(item,2)) for item in tmp]
                 pep_score = aa_score.max(dim=1).values.float().mean().item()
                 peptides_pred.append(peptide_pred)
                 peptides_score.append(pep_score)
+                aas_score.append('|'.join(tmp))
             else:
                 peptides_pred.append('$')
                 peptides_score.append(0.0)
+                aas_score.append([])
                     
         with open(self.out_writer,'a') as f:
             for i in range(len(peptides_pred)):
-                f.write(f'{titles[i]}\t{peptides_pred[i]}\t{round(peptides_score[i],2)}\n')
+                f.write(f'{peptides_pred[i]},{round(peptides_score[i],2)},{aas_score[i]},{titles[i]}\n')
 
     def on_train_epoch_end(self) -> None:
         """

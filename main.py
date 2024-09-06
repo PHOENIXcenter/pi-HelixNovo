@@ -179,11 +179,11 @@ def main(
     # Run pi-HelixNovo in the specified mode.
     if mode == "denovo":
         logger.info("Predict peptide sequences with pi-HelixNovo.")
-        writer = f"{output}_denovo.txt"
+        writer = f"{output}.csv"
         model_runner.predict(peak_path, model, config, writer)
     elif mode == "eval":
         logger.info("Evaluate a trained pi-HelixNovo model.")
-        writer = f"{output}_denovo.txt"
+        writer = f"{output}.csv"
         model_runner.evaluate(peak_path, model, config, writer)
     elif mode == "train":
         logger.info("Train the pi-HelixNovo model.")

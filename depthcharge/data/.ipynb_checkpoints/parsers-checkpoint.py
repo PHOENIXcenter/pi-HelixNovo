@@ -272,8 +272,8 @@ class MgfParser(BaseParser):
         if not self.denovo:
             self.annotations.append(spectrum["params"].get("seq"))
         else:
-            self.annotations.append(spectrum["params"]["title"])
-        
+            self.annotations.append(str(self.path).split('/')[-1]+':'+str(self._counter))
+            #self.annotations.append(spectrum["params"]["title"])
 
         if self.valid_charge is None or precursor_charge in self.valid_charge:
             self.mz_arrays.append(spectrum["m/z array"])

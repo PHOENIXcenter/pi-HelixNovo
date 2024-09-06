@@ -27,7 +27,7 @@ residues:
   "P": 97.052764
   "V": 99.068414
   "T": 101.047670
-  "C+57.021": 160.030649 # 103.009185 + 57.021464
+  "C[UNIMOD:4]": 160.030649 # 103.009185 + 57.021464 "C+57.021"
   "L": 113.084064
   "I": 113.084064
   "N": 114.042927
@@ -42,14 +42,14 @@ residues:
   "Y": 163.063329
   "W": 186.079313
   # Amino acid modifications.
-  "M+15.995": 147.035400    # Met oxidation:   131.040485 + 15.994915
-  "N+0.984": 115.026943     # Asn deamidation: 114.042927 +  0.984016
-  "Q+0.984": 129.042594     # Gln deamidation: 128.058578 +  0.984016
+  "M[UNIMOD:35]": 147.035400    # Met oxidation:   131.040485 + 15.994915 "M+15.995"
+  "N[UNIMOD:7]": 115.026943     # Asn deamidation: 114.042927 +  0.984016 "N+0.984"
+  "Q[UNIMOD:7]": 129.042594     # Gln deamidation: 128.058578 +  0.984016 "Q+0.984"
   # N-terminal modifications.
-  "+42.011": 42.010565      # Acetylation
-  "+43.006": 43.005814      # Carbamylation
-  "-17.027": -17.026549     # NH3 loss
-  "+43.006-17.027": 25.980265
+  "[UNIMOD:1]-": 42.010565      # Acetylation "+42.011"
+  "[UNIMOD:5]-": 43.005814      # Carbamylation "+43.006"
+  "[UNIMOD:385]-": -17.026549     # NH3 loss "-17.027"
+  "[UNIMOD:5][UNIMOD:385]-": 25.980265 #"+43.006-17.027"
 n_log: 1
 tb_summarywriter:
 warmup_iters: 100_000
@@ -74,4 +74,4 @@ every_n_train_steps: 50_000
 
 decoding: 'greedy'  # select in ["beam search",'greedy']
 n_beams: 2
-n_workers: 0
+n_workers: 2

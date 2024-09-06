@@ -46,22 +46,20 @@ python main.py --mode=eval --gpu=0 --config=./config.yaml --output=evaluate.log 
 ```
 python main.py --mode=denovo --config=./config.yaml --gpu=0 --output=denovo.log --peak_path=./sample_data/denovo_sample/*.mgf --model=the_path_of_your_model
 ```
-The results will be shown in the current folder as **denovo**_denovo.txt because --output=**denovo**.log
-| TITLE | Peptide | p |  
-| :--: | :--: | :--: |  
-| 27 | VLEGHAEK | 0.95 |  
-| 28 | LQHEAATATQK | 0.93 |  
-| 29 | KEAAPPPK | 0.96 |
+The results will be shown in the current folder as **denovo**.csv because --output=**denovo**.log
+| sequence | score | aa_scores | spectrum_id |  
+| :--: | :--: | :--: | :--: |  
+| VLEGHAEK | 0.95 | 1.0|1.0|0.92|1.0|1.0|1.0|0.7|1.0 | sample.mgf:0 |  
+| LQHEAATATQK | 0.93 | 1.0|0.99|1.0|0.93|1.0|1.0|0.53|0.98|0.99|0.83|1.0 | sample.mgf:1 |  
+| KEAAPPPK | 0.96 | 1.0|0.99|1.0|1.0|0.72|1.0|1.0|1.0 | sample.mgf:2 |
 
-"TITLE" is the TITLE information of the MS spectrum in the corresponding mgf file, and "p" is the confidence score of the peptide sequence.
-
-## The config.yaml used in pi-HelixNovo
-To train models on the nine-species benchmark dataset, please use config.yaml  
-
-To train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD012979, please use merge-config.yaml.
-
-To  train models on the MSV000081142 dataset, please use config.yaml
-
+- `"sequence"` — predicted peptide sequence
+- `"score"` — "confidence" score for a predicted sequence
+- `"aa_scores"` — per-amino acid scores
+- `"spectrum_id"` — information of each prediction
+    `{filename}:{index}` string, where  
+    `filename` — name of the .mgf file
+    `index` —  index (0-based) of each spectrum in an .mgf file.
 
 # Recommendation
 For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "MSV000081142-epoch-5-step-800000.ckpt", which was trained on the MSV000081142 dataset, while employing the "config.yaml" configuration file.
