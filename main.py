@@ -156,6 +156,10 @@ def main(
         str(aa): float(mass) for aa, mass in config["residues"].items()
     }
     # Add extra configuration options and scale by the number of GPUs.
+    if torch.cuda.is_available():
+        gpu='0'
+    else:
+        gpu='-1'
     gpu=gpu.split(',')
     gpu=[int(i) for i in gpu]
     config["train_batch_size"] = config["train_batch_size"] // len(gpu)
