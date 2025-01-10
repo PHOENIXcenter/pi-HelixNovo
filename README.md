@@ -1,10 +1,12 @@
 # π-HelixNovo2
-π-HelixNovo2 is a de novo peptide sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides with a set of bidirectional Decoders. The model weights we have trained are avaliable at https://zenodo.org/uploads/12527491. If you use π-HelixNovo2 in your work, please cite the following publication: 
+π-HelixNovo2 is an updated novel de novo peptide sequencing model that extracts accurate representations from MS data with the supplement of the complementary spectrum and employs a bidirectional decoding architecture to enhance peptide decoding. π-HelixNovo2 also integrates a quality control (QC) strategy for evaluating de novo peptides, and delivers reliable performance in identifying antibody peptides, multi-enzyme cleavage peptides, non-enzymatic peptides, detecting post-translational modifications, and analyzing the gut metaproteome. Moreover, we present the first open, user-friendly, and online computational platform (https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU), enabling accurate de novo peptide sequencing for all, particularly for users without programming expertise. The model weights we have trained are avaliable at https://zenodo.org/uploads/12527491. If you use π-HelixNovo2 in your work, please cite the following publication: 
 
-Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
+**π-HelixNovo**: Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
 
-# The architecture of π-HelixNovo2
-![model-architecture](Model-architecture.jpg)
+**π-HelixNovo2**: π-HelixNovo2: making accurate online de novo peptide sequencing available to all. (Preparing...)
+
+# π-HelixNovo2 workflow
+![model-architecture](workflow.svg)
 
 # The usage of our code
 ## Preparation:
