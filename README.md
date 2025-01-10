@@ -6,7 +6,7 @@
 **π-HelixNovo2**: π-HelixNovo2: making accurate online de novo peptide sequencing available to all. (Preparing...)
 
 # π-HelixNovo2 workflow
-![model-architecture](workflow.svg)
+![workflow](workflow.svg)
 
 # The usage of our code
 ## Preparation:
