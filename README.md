@@ -82,6 +82,8 @@ To train models on the merged dataset of PXD008808, PXD011246, PXD012645 and PXD
 
 To  train models on the MSV000081142 dataset, please use config.yaml
 
+To  train models on the MassIVE-KB dataset, please use config.yaml
+
 To  train models on the datasets used in GraphNovo, please use config-graph.yaml
 
 To  train models on the datasets used in PepNet, please use config-pepnet.yaml
@@ -89,4 +91,5 @@ To  train models on the datasets used in PepNet, please use config-pepnet.yaml
 To  train models on the MSV000082287 dataset (MS2 spectra of human gut bacteria proteins), please use config-gut.yaml
 
 # Recommendation
-For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "Powerful-pi-HelixNovo2/ModelWeights/Trained-On-MSV000081142.ckpt", which was trained on the MSV000081142 dataset, while employing the "config.yaml" configuration file.
+For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "pi-helixnovo2_massivekb.ckpt", which was trained on the MassIVE-KB dataset, while employing the "config.yaml" configuration file.
+
