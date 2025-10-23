@@ -64,5 +64,6 @@ To  train models on the MSV000081142 dataset, please use config.yaml
 
 
 # Recommendation
-For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "pi-helixnovo_massivekb.ckpt", which was trained on the large-scale MassIVE-KB dataset, while employing the "config.yaml" configuration file.
+For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight ["pi-helixnovo_massivekb.ckpt"](https://media.githubusercontent.com/media/PHOENIXcenter/pi-HelixNovo/refs/heads/pi-HelixNovo-for-DenovoBenchmarks/pi-helixnovo_massivekb.ckpt?download=true), which was trained on the large-scale MassIVE-KB dataset, while employing the "config.yaml" configuration file.
+
 
