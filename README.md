@@ -62,4 +62,5 @@ The results will be shown in the current folder as **denovo**.csv because --outp
     `index` —  index (0-based) of each spectrum in an .mgf file.
 
 # Recommendation
-For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "MSV000081142-epoch-5-step-800000.ckpt", which was trained on the MSV000081142 dataset, while employing the "config.yaml" configuration file.
+For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "pi-helixnovo_massivekb.ckpt", which was trained on the large-scale MassIVE-KB dataset, while employing the "config.yaml" configuration file.
+
