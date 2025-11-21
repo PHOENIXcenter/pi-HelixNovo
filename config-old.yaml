@@ -2,10 +2,10 @@
 random_seed: 454
 
 # Spectrum processing options.
-n_peaks: 350
+n_peaks: 150
 min_mz: 50.52564895  # 1.0005079 * 50.5
-max_mz: 6500.0
-min_intensity: 0.0
+max_mz: 2500.0
+min_intensity: 0.01
 remove_precursor_tol: 2.0  # Da
 max_charge: 10
 precursor_mass_tol: 50  # ppm
@@ -52,14 +52,14 @@ residues:
   "[UNIMOD:5][UNIMOD:385]-": 25.980265 #"+43.006-17.027"
 n_log: 1
 tb_summarywriter:
-warmup_iters: 360_000
-max_iters: 2200_000
+warmup_iters: 100_000
+max_iters: 600_000
 learning_rate: 5e-4
 weight_decay: 1e-5
 
 # Training/inference options.
 train_batch_size: 32
-predict_batch_size: 256
+predict_batch_size: 32
 
 logger:
 max_epochs: 30
