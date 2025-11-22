@@ -109,6 +109,10 @@ def main(
         config = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "config.yaml"
         )
+    if 'pi-helixnovo_massivekb.ckpt' in model:
+        pass
+    else:
+        config = config.replace('config.yaml','config-old.yaml')
     config_fn = config
     with open(config) as f_in:
         config = yaml.safe_load(f_in)
