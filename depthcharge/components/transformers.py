@@ -174,8 +174,22 @@ class _PeptideTransformer(torch.nn.Module):
         if not isinstance(sequence, str):
             return sequence  # Assume it is already tokenized.
 
-        sequence = sequence.replace("I", "L")
-        sequence = re.split(r"(?<=.)(?=[A-Z])", sequence)
+        
+        #sequence = re.split(r"(?<=.)(?=[A-Z])", sequence)
+        
+        pattern = re.compile(
+            r'\[UNIMOD:\d+\]-'         # N-term 修饰
+            r'|[A-Z](?:\[[^\]]+\])*'   # 氨基酸 + 任意修饰
+        )
+
+        sequence = pattern.findall(sequence)
+        
+        for i in range(len(sequence)):
+            if sequence[i] == 'I':
+                sequence[i] = 'L'
+                
+        
+        
         if self.reverse:
             sequence = list(reversed(sequence))
 
@@ -201,7 +215,7 @@ class _PeptideTransformer(torch.nn.Module):
         if self.reverse:
             sequence = list(reversed(sequence))
 
-        return "".join(sequence)
+        return sequence #"".join(sequence)
 
     @property
     def vocab_size(self):
