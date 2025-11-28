@@ -4,7 +4,7 @@
 **π-HelixNovo**: Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
 
 **π-HelixNovo2**: π-HelixNovo2: making accurate online de novo peptide sequencing available to all. (Preparing...)
-
+<img src="./Gemini.png" width="100%"/>
 # π-HelixNovo2 workflow
 ![workflow](workflow.svg)
 
@@ -92,4 +92,5 @@ To  train models on the MSV000082287 dataset (MS2 spectra of human gut bacteria 
 
 # Recommendation
 For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "pi-helixnovo2_massivekb.ckpt", which was trained on the MassIVE-KB dataset, while employing the "config.yaml" configuration file.
+
 
