@@ -15,6 +15,8 @@ import torch
 from torch.utils.tensorboard import SummaryWriter
 from depthcharge.components import ModelMixin, PeptideDecoder, SpectrumEncoder
 from denovo import evaluate
+import os
+import glob
 
 
 logger = logging.getLogger("pi-HelixNovo")
@@ -932,7 +934,8 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
                 peptides_pred.append('$')
                 peptides_score.append(0.0)
                     
-        with open(self.out_writer,'a') as f:
+        #with open(self.out_writer,'a') as f:
+        with open(self.out_writer.split('_denovo.txt')[0]+'_'+str(self.global_rank)+'_denovo.txt','a') as f:
             for i in range(len(peptides_pred)):
                 f.write(f'{titles[i]}\t{peptides_pred[i]}\t{round(peptides_score[i],2)}\n')
 
@@ -970,6 +973,19 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         Write the predicted peptide sequences and amino acid scores to the
         output file.
         """
+        if self.global_rank == 0:
+            base_name = self.out_writer.split('_denovo.txt')[0]
+            file_pattern = f"{base_name}_*_denovo.txt"
+            
+            # 获取并按数字排序
+            files = sorted(glob.glob(file_pattern), 
+                        key=lambda x: int(x.split('_')[-2]) if x.split('_')[-2].isdigit() else 0)
+            
+            with open(self.out_writer, 'w') as outfile:
+                for file in files:
+                    with open(file, 'r') as infile:
+                        outfile.write(infile.read() + '\n')
+                    os.remove(file)
         print('Finished!')
 
     def _log_history(self) -> None:
