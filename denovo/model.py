@@ -15,7 +15,8 @@ import torch
 from torch.utils.tensorboard import SummaryWriter
 from depthcharge.components import ModelMixin, PeptideDecoder, SpectrumEncoder
 from denovo import evaluate
-
+import os
+import glob
 
 logger = logging.getLogger("pi-HelixNovo")
 
@@ -1045,7 +1046,8 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         peptides_pred_raw_f_1, aa_scores_f_1 = self.forward(memories, mem_masks,precursors,self.decoder_f_1)
         peptides_pred_raw_r_1, aa_scores_r_1 = self.forward(memories, mem_masks,precursors,self.decoder_r_1)
         
-        with open(self.out_writer,'a') as f:
+        #with open(self.out_writer,'a') as f:
+        with open(self.out_writer.split('_denovo.txt')[0]+'_'+str(self.global_rank)+'_denovo.txt','a') as f:
             for peptide_pred_f,peptide_pred_r, title, aa_score_f,aa_score_r,peptide_pred_f_1,peptide_pred_r_1, aa_score_f_1,aa_score_r_1 in zip(peptides_pred_raw_f,peptides_pred_raw_r, titles, aa_scores_f,aa_scores_r,peptides_pred_raw_f_1,peptides_pred_raw_r_1, aa_scores_f_1,aa_scores_r_1):
                 length_f=len(re.split(r"(?<=.)(?=[A-Z])", peptide_pred_f))
                 length_r=len(re.split(r"(?<=.)(?=[A-Z])", peptide_pred_r))
@@ -1145,6 +1147,19 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         Write the predicted peptide sequences and amino acid scores to the
         output file.
         """
+        if self.global_rank == 0:
+            base_name = self.out_writer.split('_denovo.txt')[0]
+            file_pattern = f"{base_name}_*_denovo.txt"
+            
+            # 获取并按数字排序
+            files = sorted(glob.glob(file_pattern), 
+                        key=lambda x: int(x.split('_')[-2]) if x.split('_')[-2].isdigit() else 0)
+            
+            with open(self.out_writer, 'w') as outfile:
+                for file in files:
+                    with open(file, 'r') as infile:
+                        outfile.write(infile.read() + '\n')
+                    os.remove(file)
         print('Finished!')
 
     def _log_history(self) -> None:
