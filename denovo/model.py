@@ -1158,7 +1158,7 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
             with open(self.out_writer, 'w') as outfile:
                 for file in files:
                     with open(file, 'r') as infile:
-                        outfile.write(infile.read() + '\n')
+                        outfile.write(infile.read())
                     os.remove(file)
         print('Finished!')
 
