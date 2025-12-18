@@ -8,9 +8,9 @@
 
 # Code availability
 ## π-HelixNovo
-**π-HelixNovo** is the first version of the software. It proposes the complementary spectrum to enhance the ion information of a MS2 spectrum and is available in [**this branch**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovo).
+**π-HelixNovo** is the first version of the software. It proposes the complementary spectrum to enhance the ion information of a MS2 spectrum and is available at [**this branch**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovo).
 ## π-HelixNovo2
-**π-HelixNovo2** is an updated version of π-HelixNovo that extracts accurate representations from MS data with the supplement of the complementary spectrum and employs a bidirectional decoding architecture to enhance peptide decoding. π-HelixNovo2 also integrates a quality control (QC) strategy for evaluating de novo peptides, and present the first open, user-friendly, and online [**computational platform**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU), enabling accurate de novo peptide sequencing for all, particularly for users without programming expertise. π-HelixNovo2 is available in [**this branch**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovoV2).
+**π-HelixNovo2** is an updated version of π-HelixNovo that extracts accurate representations from MS data with the supplement of the complementary spectrum and employs a bidirectional decoding architecture to enhance peptide decoding. π-HelixNovo2 also integrates a quality control (QC) strategy for evaluating de novo peptides, and present the first open, user-friendly, and online [**computational platform**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU), enabling accurate de novo peptide sequencing for all, particularly for users without programming expertise. π-HelixNovo2 is available at [**this branch**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovoV2).
 # Hardware requirements
 ## GPU
 - Train a model from scratch: An NVIDIA GPU with enough computing power and memory (e.g., Tesla V100 with 32GB of memory).
@@ -25,7 +25,7 @@ Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/
 - The [**computational platform**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU) has been prepared for users without programming expertise, with an [**operation video**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU/src/branch/main/User-guide-English.mp4) attached.
 - We also prepared a Graphical User Interface (GUI) version for Windows users, which can be downloaded from [**here**]().
   1. Unzip π-HelixNovo.7z.
-  2. Ensure that your Windows system is 64 bit (only 64 bit system is supported), and the corresponding NVIDIA Driver has been installed on your system.
+  2. Ensure that your Windows system is 64 bit (only 64 bit system is supported), and the corresponding NVIDIA Driver has been installed in your system.
   3. Double click π-HelixNovo.exe.
   4. Select mgf files as Input Files.
   5. Select the Output Folder.
@@ -34,6 +34,7 @@ Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/
   8. Click RUN
 
 ![GUI](GUI.png)
+
 
 
 
