@@ -22,8 +22,13 @@
 Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovo) and [**π-HelixNovo2**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovoV2).
 ## For users without programming expertise
 - The [**computational platform**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU) has been prepared for users without programming expertise, with an [**operation video**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU/src/branch/main/User-guide-English.mp4) attached.
-
 - We also prepared a Graphical User Interface (GUI) version for Windows users, which can be downloaded from [**here**]().
+  1. Select mgf files as Input Files.
+  2. Select the Output Folder.
+  3. Select the model (model.ckpt) we provided to fill the Model Path.
+  4. Choose the device (GPUs refers to all GPUS available).
+  5. Click RUN
 ![GUI](GUI.png)
+
 
 
