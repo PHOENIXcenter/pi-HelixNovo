@@ -1,5 +1,5 @@
 # <div align="center">  π-HelixNovo Homepage </div>
-# Introduction
+# Introduction and Publications
 π-HelixNovo is a de novo sequencing model based on the Transformer architecture, using MS2 spectra as inputs and generating the corresponding peptides. If you use π-HelixNovo in your work, please cite the following publication: 
 
 **π-HelixNovo**: Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
@@ -31,6 +31,7 @@ Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/
   5. Click RUN
 
 ![GUI](GUI.png)
+
 
 
 
