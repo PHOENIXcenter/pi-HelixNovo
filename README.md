@@ -28,7 +28,9 @@ Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/
   3. Select the model (model.ckpt) we provided to fill the Model Path.
   4. Choose the device (GPUs refers to all GPUS available).
   5. Click RUN
+
 ![GUI](GUI.png)
+
 
 
 
