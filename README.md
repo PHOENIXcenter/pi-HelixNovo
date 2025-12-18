@@ -23,8 +23,8 @@
 Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovo) and [**π-HelixNovo2**](https://github.com/PHOENIXcenter/pi-HelixNovo/tree/pi-HelixNovoV2).
 ## For users without programming expertise
 - The [**computational platform**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU) has been prepared for users without programming expertise, with an [**operation video**](https://openi.pcl.ac.cn/OpenI/pi-HelixNovo-NPU/src/branch/main/User-guide-English.mp4) attached.
-- We also prepared a Graphical User Interface (GUI) version for Windows users, which can be downloaded from [**here**]().
-  1. Unzip π-HelixNovo.7z.
+- We also prepared a Graphical User Interface (GUI) version for Windows users, which can be downloaded from [**here**](https://github.com/PHOENIXcenter/pi-HelixNovo/releases/download/pi-HelixNovo-GUI/pi-HelixNovo.7z).
+  1. Unzip pi-HelixNovo.7z.
   2. Ensure that your Windows system is 64 bit (only 64 bit system is supported), and the corresponding NVIDIA Driver has been installed for the GPUs in your machine.
   3. Double click π-HelixNovo.exe.
   4. Select mgf files as Input Files.
@@ -34,6 +34,7 @@ Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/
   8. Click RUN
 
 ![GUI](GUI.png)
+
 
 
 
