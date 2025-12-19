@@ -30,10 +30,11 @@ Referring to user guides of [**π-HelixNovo**](https://github.com/PHOENIXcenter/
   4. Select mgf files as Input Files.
   5. Select the Output Folder.
   6. Select the model (model.ckpt) we provided to fill the Model Path.
-  7. Choose the device (GPUs refers to all GPUS available).
+  7. Choose the device (GPUs refers to all GPUs available).
   8. Click RUN
 
 ![GUI](GUI.png)
+
 
 
 
