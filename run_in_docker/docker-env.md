@@ -22,7 +22,7 @@ docker run -it -v c:/docker-share-dir/:/data:rw --gpus all --shm-size 15G --name
 ![run2](docker-env/run2.png)
 
 ```
-cd /home/; rm -rf pi-HelixNovo; git clone https://github.com/PHOENIXcenter/pi-HelixNovo.git
+cd /home/; rm -rf pi-HelixNovo; git clone https://github.com/PHOENIXcenter/pi-HelixNovo.git -b pi-HelixNovo
 cd /home/pi-HelixNovo/; conda activate main_env;
 ```
 
