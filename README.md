@@ -91,6 +91,6 @@ To  train models on the datasets used in PepNet, please use config-pepnet.yaml
 To  train models on the MSV000082287 dataset (MS2 spectra of human gut bacteria proteins), please use config-gut.yaml
 
 # Recommendation
-For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight "pi-helixnovo2_massivekb.ckpt", which was trained on the MassIVE-KB dataset, while employing the "config.yaml" configuration file.
+For practical large-scale de novo peptide sequencing, we highly recommend utilizing the model weight ["Evaluation_on_MassIVE-KB_dataset.zip/ModelWeights/pi-helixnovo2_massivekb.ckpt"](https://zenodo.org/records/16735542/files/Evaluation_on_MassIVE-KB_dataset.zip?download=1), which was trained on the MassIVE-KB dataset, while employing the "config.yaml" configuration file.
 
 
