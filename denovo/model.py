@@ -1147,6 +1147,8 @@ class Spec2Pep(pl.LightningModule, ModelMixin):
         Write the predicted peptide sequences and amino acid scores to the
         output file.
         """
+        if torch.distributed.is_available() and torch.distributed.is_initialized():
+            torch.distributed.barrier()
         if self.global_rank == 0:
             base_name = self.out_writer.split('_denovo.txt')[0]
             file_pattern = f"{base_name}_*_denovo.txt"
