@@ -2,6 +2,8 @@
 pi-HelixNovo is a de novo sequencing model based on the Transformer architecture, using a MS2 spectrum and its complementary spectrum as inputs and generating the corresponding peptides. The model weights we have trained are avaliable at https://zenodo.org/records/10405582. If you use pi-HelixNovo in your work, please cite the following publication: 
 
 Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
+
+Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Cheng Lai, Jiangli Hu, Zexuan Yi, Yonghong He, Leyuan Li, Yue Yu, Cheng Chang, Yu Wang, π-HelixNovo2: Making Accurate Online De Novo Peptide Sequencing Available to All, Genomics, Proteomics & Bioinformatics, 2026;, qzag049, https://doi.org/10.1093/gpbjnl/qzag049
 # Hardware requirements
 ## GPU
 - Train a model from scratch: An NVIDIA GPU with enough computing power and memory (e.g., Tesla V100 with 32GB of memory).
