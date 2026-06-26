@@ -4,7 +4,7 @@
 
 **π-HelixNovo**: Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Fan Xu, Xiansong Huang, Linhai Xie, Yonghong He, Leyuan Li, Fuchu He, Yu Wang, Cheng Chang, Introducing π-HelixNovo for practical large-scale de novo peptide sequencing, Briefings in Bioinformatics, Volume 25, Issue 2, March 2024, bbae021, https://doi.org/10.1093/bib/bbae021
 
-**π-HelixNovo2**: Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Cheng Lai, Jiangli Hu, Zexuan Yi, Yonghong He, Leyuan Li, Yue Yu, Cheng Chang*, Yu Wang*. π-HelixNovo2: making accurate online de novo peptide sequencing available to all. Genomics, Proteomics & Bioinformatics, accepted in principle.
+**π-HelixNovo2**: Tingpeng Yang, Tianze Ling, Boyan Sun, Zhendong Liang, Cheng Lai, Jiangli Hu, Zexuan Yi, Yonghong He, Leyuan Li, Yue Yu, Cheng Chang, Yu Wang, π-HelixNovo2: Making Accurate Online De Novo Peptide Sequencing Available to All, Genomics, Proteomics & Bioinformatics, 2026;, qzag049, https://doi.org/10.1093/gpbjnl/qzag049
 
 # Code availability
 ## π-HelixNovo
